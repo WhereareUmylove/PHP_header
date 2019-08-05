@@ -1,29 +1,29 @@
-PHP header µÄ¼¸ÖÖÓÃ·¨£¬ÄãÖªµÀ¼¸ÖÖ£¿
-1. Ìø×ªÒ³Ãæ
+PHP header çš„å‡ ç§ç”¨æ³•ï¼Œä½ çŸ¥é“å‡ ç§ï¼Ÿ
 
-header('Location:'.$url);  //LocationºÍ":"Ö®¼äÎŞ¿Õ¸ñ¡£
-2. ÉùÃ÷content-type
+1. è·³è½¬é¡µé¢
+header('Location:'.$url);  //Locationå’Œ":"ä¹‹é—´æ— ç©ºæ ¼ã€‚
 
+2. å£°æ˜content-type
 header('content-type:text/html;charset=utf-8');
-3. ·µ»Øresponse×´Ì¬Âë
 
+3. è¿”å›responseçŠ¶æ€ç 
 header('HTTP/1.1 404 Not Found');
-4. ÔÚÄ³¸öÊ±¼äºóÖ´ĞĞÌø×ª
 
-header('Refresh: 10; url=http://www.baidu.com/');  //10sºóÌø×ª¡£
-5. ¿ØÖÆä¯ÀÀÆ÷»º´æ
+4. åœ¨æŸä¸ªæ—¶é—´åæ‰§è¡Œè·³è½¬
+header('Refresh: 10; url=http://www.baidu.com/');  //10såè·³è½¬ã€‚
 
+5. æ§åˆ¶æµè§ˆå™¨ç¼“å­˜
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . "GMT");
 header("Cache-Control: no-cache, must-revalidate");
 header("Pragma: no-cache");
-6. Ö´ĞĞhttpÑéÖ¤
 
+6. æ‰§è¡ŒhttpéªŒè¯
 header('HTTP/1.1 401 Unauthorized');
 header('WWW-Authenticate: Basic realm="Top Secret"');
-7. Ö´ĞĞÏÂÔØ²Ù×÷
 
-header('Content-Type: application/octet-stream'); //ÉèÖÃÄÚÈİÀàĞÍ
-header('Content-Disposition: attachment; filename="example.zip"'); //ÉèÖÃMIMEÓÃ»§×÷Îª¸½¼ş
-header('Content-Transfer-Encoding: binary'); //ÉèÖÃ´«Êä·½Ê½
-header('Content-Length: '.filesize('example.zip')); //ÉèÖÃÄÚÈİ³¤¶È
+7. æ‰§è¡Œä¸‹è½½æ“ä½œ
+header('Content-Type: application/octet-stream'); //è®¾ç½®å†…å®¹ç±»å‹
+header('Content-Disposition: attachment; filename="example.zip"'); //è®¾ç½®MIMEç”¨æˆ·ä½œä¸ºé™„ä»¶
+header('Content-Transfer-Encoding: binary'); //è®¾ç½®ä¼ è¾“æ–¹å¼
+header('Content-Length: '.filesize('example.zip')); //è®¾ç½®å†…å®¹é•¿åº¦
